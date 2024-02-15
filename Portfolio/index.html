@@ -7,15 +7,27 @@
 </head>
 <body>
   <header class="hhead">
-    <h1>Antony Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div>
+      <h1>Antony Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <a href="https://drive.google.com/file/d/1a-EUKTkQxIMAnvwOUb658pkdmPLkfYML/view?usp=drive_link" target="_blank">
+      <div class="bttn">
+        <button>Resume</button>
+
+    </a>
+    
+
+    </div>
+
+    
   </header>
 
   <section id="home" class="hero">
@@ -36,7 +48,7 @@
         <p style="color: aliceblue;">Highly skilled in Python, Java, HTML,SSS,JavaScript, and MySQL, with a strong foundation in software development and database management. Combining my expertise in these languages, I have successfully delivered impactful real time projects and effectively solved complex problems. With a passion for continuous learning and staying up-to-date with the latest technologies, I am dedicated to delivering high-quality solutions and driving successful outcomes.</p>
       </div>
       
-      <button>Resume</button>
+      
     </div>
   </section>
   
@@ -107,6 +119,9 @@
       padding: 0;
     }
     .hhead{
+      display: flex;
+      flex-direction: row;
+
       position: fixed;
       top: 0;
       width: 100%;
@@ -114,6 +129,9 @@
       background: rgba(0,0,0,0.8);
       backdrop-filter: saturate(100%) blur(2px);
       
+    }
+    .bttn{
+      margin-left: 60%;
     }
     
     body {
@@ -177,11 +195,11 @@
     
     .about-content {
       display: flex;
-      flex-direction: column;
+      
       align-items: center;
     }
-    .about-content button{
-      margin-top: 50px ;
+    .bttn button{
+      margin-top: 15px ;
       width: 100px;
       height: 40px;
       background-color: #00f7ff;
@@ -189,7 +207,7 @@
       border-radius: 4px;
       transition: 0.5s;
     }
-    .about-content button:hover{
+    .bttn button:hover{
       width: 120px;
       height: 60px;
       background-color: white;
