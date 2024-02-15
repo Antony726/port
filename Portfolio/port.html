@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <link rel="js" href="script.js">
+  
+</head>
+<body>
+  <header class="hhead">
+    <h1>Antony Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Antony portfolio!</h2>
+      <p style="color: aliceblue;">Check out my projects and get in touch.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="profile-img">
+        <img src="profile.jpg" alt="Profile Image">
+      </div>
+      <div class="profile-text">
+        <h3>Hi, I'm Antony</h3>
+        <p style="color: aliceblue;">Highly skilled in Python, Java, HTML,SSS,JavaScript, and MySQL, with a strong foundation in software development and database management. Combining my expertise in these languages, I have successfully delivered impactful real time projects and effectively solved complex problems. With a passion for continuous learning and staying up-to-date with the latest technologies, I am dedicated to delivering high-quality solutions and driving successful outcomes.</p>
+      </div>
+      
+      <button>Resume</button>
+    </div>
+  </section>
+  
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <a href="https://github.com/Antony726/libsystem">
+      <div class="project-card" onclick="openProject('project1')">
+        <img src="proj1.jpg" alt="Project 1">
+        <div class="project-overlay">
+          <h3>Library Management</h3>
+        </div>
+      </div>
+      
+
+    </a>
+    
+      <div class="project-card" onclick="openProject('project2')">
+        <img src="proj4.jpeg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Cyber Grip : Enhanced Bionic hand<br>
+            won 3rd prize in project day
+          </h3>
+        </div>
+      </div>
+
+    
+    
+    <a href="https://github.com/dashboard">
+      <div class="project-card" onclick="openProject('project2')">
+        <img src="pro2.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Voting System</h3>
+        </div>
+      </div>
+
+    </a>
+    <a href="https://github.com/Antony726/preevent">
+      <div class="project-card" onclick="openProject('project2')">
+        <img src="proj3.jpg" alt="Project 2">
+        <div class="project-overlay">
+          <h3>Kratos website</h3>
+        </div>
+      </div>
+
+    </a>
+    
+    
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form method="post" name="contact-form" >
+      <input type="text" placeholder="Your Name" name="Name">
+      <input type="email" placeholder="Your Email" name="mailId">
+      <textarea placeholder="Your Message" name="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Antony. All rights reserved.</p>
+  </footer>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .hhead{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: saturate(100%) blur(2px);
+      
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #000000;
+      padding: 20px;
+      color: #66fcf1;
+    }
+    
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    nav ul {
+      list-style: none;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: #45a29e;
+    }
+    
+    .hero {
+      background-image: url('hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #66fcf1;
+      background-color: #1f2833;
+    }
+    
+    .hero-content {
+      text-align: center;
+    }
+    
+    .about {
+      padding: 50px;
+      color: #66fcf1;
+      background-color: #1f2833;
+    }
+    
+    .about h2 {
+      font-size: 28px;
+      text-align: center;
+      color: #66fcf1;
+      background-color: #1f2833;
+      margin-bottom: 30px;
+    }
+    
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .about-content button{
+      margin-top: 50px ;
+      width: 100px;
+      height: 40px;
+      background-color: #00f7ff;
+      color: white;
+      border-radius: 4px;
+      transition: 0.5s;
+    }
+    .about-content button:hover{
+      width: 120px;
+      height: 60px;
+      background-color: white;
+      color: #00f7ff;
+    }
+    .profile-img {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .profile-img img {
+      width: 200px;
+      border-radius: 50%;
+    }
+    
+    .profile-text {
+      flex: 1;
+      padding-left: 50px;
+    }
+    
+    .projects {
+      padding: 50px;
+      color: #66fcf1;
+      background-color: #1f2833;
+    }
+    
+    .projects h2 {
+      font-size: 28px;
+      text-align: center;
+      color: #66fcf1;
+      margin-bottom: 30px;
+    }
+    
+    .project-card {
+      position: relative;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+    
+    .project-card img {
+      width: 100%;
+    }
+    
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+    
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+    
+    .project-overlay h3 {
+      color: #fff;
+      font-size: 24px;
+    }
+    
+    .contact {
+      padding: 50px;
+      background-color: #333;
+      color: #fff;
+    }
+    
+    .contact h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .contact input,
+    .contact textarea {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    
+    .contact button {
+      padding: 10px 20px;
+      background-color: #66fcf1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    footer {
+      background-color: #1f2833;
+      padding: 20px;
+      text-align: center;
+      color: #00f7ff;
+    }
+  </style>
+</body>
+</html>
